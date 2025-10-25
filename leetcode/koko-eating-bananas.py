@@ -5,12 +5,11 @@ class Solution:
 
         while l <= r:
             k = (l + r) // 2
-
-            time = 0
-            for pile in piles:
-                time += math.ceil(float(pile) / k)
+            hours = 0
+            for p in piles:
+                hours += math.ceil(p / k)
             
-            if time <= h:
+            if hours <= h:
                 res = k
                 r = k - 1
             else:
